@@ -18,6 +18,7 @@ function sayHello(name) {
 let message = sayHello(username);
 var nextMessage = sayHello('Test');
 ```
+![image](images/1.png)
 ## Interprete
 ```js
 // Declaration phase
@@ -57,6 +58,7 @@ function sayHello(name) {
 let message = sayHello(username);
 var nextMessage = sayHello('Test');
 ```
+![image](images/2.jpg)
 ## Interprete
 
 ```js
@@ -93,6 +95,7 @@ let sayHello = function (name) {
 let message = sayHello(username);
 var nextMessage = sayHello('Test');
 ```
+![image](images/3.jpg)
 ## Interpret
 ```js
 // Declaration phase
@@ -121,6 +124,7 @@ let sayHello = function (name) {
 
 var nextMessage = sayHello('Test');
 ```
+![image](images/4.jpg)
 ## Interpret
 ```js
 // Declaration phase
@@ -141,6 +145,7 @@ console.log(age);
 var name = 'Lydia';
 let age = 21;
 ```
+![image](images/5.jpg)
 ## Interpret
 ```js
 // Declaration phase
@@ -162,6 +167,7 @@ function sayHi(name) {
 
 sayHi();
 ```
+![image](images/6.jpg)
 # Interpret
 ```js
 //Declaration phase
@@ -187,6 +193,7 @@ function sayHi(name) {
   let age = 21;
 }
 ```
+![image](images/6.jpg)
 ## Interpret
 ```js
 //Declaration phase
@@ -212,6 +219,7 @@ let sayHi = function sayHi(name) {
   let age = 21;
 };
 ```
+![image](images/7.jpg)
 ## Interpret
 ```js
 let sayHi;
@@ -226,6 +234,7 @@ console.log(sum);
 var sum = num1 + num2;
 let num2 = 30;
 ```
+![image](images/8.jpg)
 ## Interpret
 ```js
 //declaration phase
@@ -254,6 +263,7 @@ let num2 = 200;
 
 let sum = add(num1, num2, 4, 5, 6);
 ```
+![image](images/9.jpg)
 ## Interpret
 ```js
 //Declaration phase
@@ -283,6 +293,7 @@ let add = (a, b) => {
   return a + b;
 };
 ```
+![image](images/10.jpg)
 ## Interpret
 ```js
 //declaration
@@ -311,6 +322,7 @@ function add(a, b) {
   return a + b;
 }
 ```
+![image](images/11.png)
 ## Interpret
 ```js
 // Declaration phase
