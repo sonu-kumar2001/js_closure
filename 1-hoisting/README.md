@@ -18,7 +18,30 @@ function sayHello(name) {
 let message = sayHello(username);
 var nextMessage = sayHello('Test');
 ```
+## Interprete
+```js
+// Declaration phase
 
+var username;
+let brothers;
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+let message;
+var nextMessage;
+
+// Execution phase
+
+username = 'Arya';
+brothers = ['John', 'Ryan', 'Bran'];
+
+console.log(username, brothers[0]); // "Arya", "John"
+
+message = sayHello(username);
+nextMessage = sayHello('Test');
+```
 2.
 
 ```js
@@ -33,6 +56,26 @@ function sayHello(name) {
 
 let message = sayHello(username);
 var nextMessage = sayHello('Test');
+```
+## Interprete
+
+```js
+// Declaration Phase
+
+var username = undefined;
+let number;
+
+function sayHello(name) {
+  return `Hello ${name}`;
+}
+
+let message;
+var nextMessage = undefined;
+
+// Execution phase
+
+console.log(username, numbers); // undefined, ReferenceError: Cannot access 'number' before initialization
+
 ```
 
 3.
@@ -50,7 +93,19 @@ let sayHello = function (name) {
 let message = sayHello(username);
 var nextMessage = sayHello('Test');
 ```
+## Interpret
+```js
+// Declaration phase
+let username;
+let number;
 
+let sayHello;
+let message;
+var nextMessage = undefined;
+
+// Execution phase
+console.log(username, numbers);//  ReferenceError: Cannot access 'username' before initialization, ReferenceError: Cannot access 'number' before initialization  
+```
 4.
 
 ```js
@@ -66,7 +121,18 @@ let sayHello = function (name) {
 
 var nextMessage = sayHello('Test');
 ```
-
+## Interpret
+```js
+// Declaration phase
+let username;
+let number;
+let message;
+let sayHello;
+var nextMessage = undefined;
+// Execution phase
+username = 'Arya';
+console.log(username, numbers);// Arya, ReferenceError: Cannot access 'number' before initialization
+```
 5.
 
 ```js
@@ -75,7 +141,15 @@ console.log(age);
 var name = 'Lydia';
 let age = 21;
 ```
-
+## Interpret
+```js
+// Declaration phase
+var name = undefined;
+let age;
+// Execution phase
+console.log(name);// undefined;
+console.log(age); //  ReferenceError: Cannot access 'age' before initialization
+```
 6.
 
 ```js
@@ -88,7 +162,20 @@ function sayHi(name) {
 
 sayHi();
 ```
-
+# Interpret
+```js
+//Declaration phase
+function sayHi(name) {
+ //Declaration phase
+ var name = undefined;
+ let age;
+ // Execution phase
+ console.log(name); // undefined;
+ console.log(age); // ReferenceError: Cannot access 'age' before initialization
+}
+// Execution phase
+sayHi();
+```
 6.
 
 ```js
@@ -100,7 +187,20 @@ function sayHi(name) {
   let age = 21;
 }
 ```
-
+## Interpret
+```js
+//Declaration phase
+function sayHi(name) {
+ //Declaration phase
+ var name = undefined;
+ let age;
+ // Execution phase
+ console.log(name); // undefined;
+ console.log(age); // ReferenceError: Cannot access 'age' before initialization
+}
+// Execution phase
+sayHi();
+```
 7.
 
 ```js
@@ -112,7 +212,12 @@ let sayHi = function sayHi(name) {
   let age = 21;
 };
 ```
+## Interpret
+```js
+let sayHi;
 
+sayHi() // ReferenceError: Cannot access 'sayHi' before initialization
+```
 8.
 
 ```js
@@ -121,7 +226,17 @@ console.log(sum);
 var sum = num1 + num2;
 let num2 = 30;
 ```
-
+## Interpret
+```js
+//declaration phase
+let num1;
+var sum = undefined;
+let num2;
+// execution phase
+num1 = 21;
+console.log(sum);// undefined
+sum = num1 + num2;// Refrence error: Cannot access 'num2' before initialization
+```
 9.
 
 ```js
@@ -139,7 +254,21 @@ let num2 = 200;
 
 let sum = add(num1, num2, 4, 5, 6);
 ```
-
+## Interpret
+```js
+//Declaration phase
+var num1 = undefined;
+let sum2;
+let add;
+function addAgian(a, b) {
+  return a + b;
+}
+let num2;
+let sum;
+// Execution phase
+num1 = 21;
+sum2 = addAgain(num1, num2, 4, 5, 6); // Refrence error: Cannot access 'num2' before initialization
+```
 10.
 
 ```js
@@ -153,6 +282,19 @@ let sum = test(100);
 let add = (a, b) => {
   return a + b;
 };
+```
+## Interpret
+```js
+//declaration
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
+let sum;
+let add;
+// Execution
+sum = test(100); // Refrence error: Cannot access 'add' before initialization
+
 ```
 
 11.
@@ -168,4 +310,18 @@ let sum = test(100);
 function add(a, b) {
   return a + b;
 }
+```
+## Interpret
+```js
+// Declaration phase
+function test(a) {
+  let num1 = 21;
+  return add(a, num1);
+}
+let sum;
+function add(a, b) {
+  return a + b;
+}
+// Execution phase
+sum = test(100) // 121
 ```
