@@ -11,13 +11,13 @@ var animal = "monkey";
 ```js
 console.log(animal);
 let animal = "monkey";
-// animal is not initialised 
+//Refrence error: cannot access 'animal' before initialization
 ```
 
 ```js
 console.log(animal);
 const animal = "monkey";
-// animal is not initialised
+//Refrence error: cannot access 'animal' before initialization
 ```
 
 ```js
@@ -41,7 +41,7 @@ sayHello("Hey Everyone");
 var sayHello = msg => {
   alert(msg);
 };
-// undefined
+// sayHello is not a function
 ```
 
 ```js
