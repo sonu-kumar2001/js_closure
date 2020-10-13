@@ -87,7 +87,7 @@ function getCard(suit) {
   let cards = [2,3,4,5,6,7,8,9,10,"J", "Q", "K", "A"];
   return function myFunc() {
     let randomCard = cards[(Math.floor(Math.random()*13))];
-    return randomCard;
+    return `Card is: ${randomCard} ${suit}`;
   };
 }
 
